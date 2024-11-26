@@ -18,7 +18,7 @@ t2f <- function(df, tabname, size = 10, width = "1in", rownames = FALSE,
         t1 <- kable({{ df }}, "latex",
                 booktabs = TRUE, escape = FALSE,
                 row.names = rownames, digits = digits
-        ) %>%
+        ) |> 
                 kable_styling(
                         latex_options = "striped", stripe_color = scolor,
                         stripe_index = strps, font_size = size
