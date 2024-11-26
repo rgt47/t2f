@@ -1,13 +1,3 @@
-#' Title: Function to export a dataframe or table to a pdf figure. 
-#'
-#' Description: A detailed explanation of the function.
-#'
-#' @param df A dataframe or table to be exported.
-#' @return NULL 
-#' @examples
-#' t2f(iris, "iris", size = 10, width = "1in", rownames = FALSE)
-#' 
-#' @export
 t2f <- function(df, tabname, size = 10, width = "1in", rownames = FALSE,
                    scolor = "gray!6", strps = NULL, pack = NULL, digits = 3) {
         main_dir <- getwd()
@@ -26,6 +16,5 @@ t2f <- function(df, tabname, size = 10, width = "1in", rownames = FALSE,
                 as.character()
         # pack_rows(index = pack, latex_gap_space = ".15in") %>%
         write(t1, paste0("./tables/", tabname, ".tex"))
-        sout = system(paste0("sh ~/shr/figurize.sh ./tables/", tabname, ".tex"))
-	return(sout)
+        system(paste0("sh ~/shr/figurize.sh ./tables/", tabname, ".tex"))
 }

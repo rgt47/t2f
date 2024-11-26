@@ -23,6 +23,6 @@ t2f(
 Description: A detailed explanation of the function.
 }
 \examples{
-t2f(df)
+t2f(iris, "iris", size = 10, width = "1in", rownames = FALSE)
 
 }
