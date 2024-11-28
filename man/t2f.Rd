@@ -13,7 +13,8 @@ t2f(
   scolor = "gray!6",
   strps = NULL,
   pack = NULL,
-  digits = 3
+  digits = 3,
+  sub_dir = NULL
 )
 }
 \arguments{
