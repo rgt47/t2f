@@ -1,0 +1,17 @@
+Package: t2f
+Title: Generate LaTeX Tables and PDF Outputs
+Version: 0.0.0.1000
+Authors@R: 
+    person("RG", "Thomas", , "rgthomas@ucsd.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-1686-4965"))
+Description: A package to create LaTeX tables from dataframes with optional styling and generate cropped PDF outputs.
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    kableExtra,
+    glue
+License: GPL-3
