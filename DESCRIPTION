@@ -1,6 +1,6 @@
 Package: t2f
 Title: Generate LaTeX Tables and PDF Outputs
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("RG", "Thomas", , "rgthomas@ucsd.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-1686-4965"))
