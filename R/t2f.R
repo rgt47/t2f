@@ -16,10 +16,11 @@
 #' )
 #' }
 #' @export
-t2f <- function(df, filename = "table",
+t2f <- function(df, filename = NULL,
                 sub_dir = "output",
                 scolor = "blue!10", verbose = FALSE) {
         # Validate input dataframe
+    filename <- deparse(substitute(df))
         if (!is.data.frame(df)) stop("`df` must be a dataframe.")
         if (nrow(df) == 0) stop("`df` must not be empty.")
 
