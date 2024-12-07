@@ -6,7 +6,7 @@
 \usage{
 t2f(
   df,
-  filename = NULL,
+  filename = "table",
   sub_dir = "output",
   scolor = "blue!10",
   verbose = FALSE
@@ -31,8 +31,10 @@ Invisibly returns the path to the cropped PDF file.
 }
 \examples{
 \dontrun{
-t2f(mtcars, filename = "mtcars_table", sub_dir = "tables", 
-scolor = "blue!10", verbose = TRUE)
+t2f(mtcars,
+        filename = "mtcars_table", sub_dir = "tables",
+        scolor = "blue!10", verbose = TRUE
+)
 }
 }
 \author{
