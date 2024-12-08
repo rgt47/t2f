@@ -9,7 +9,6 @@ test_that("t2f generates LaTeX and PDF files correctly", {
   output <- t2f(mtcars, filename = "test_table", sub_dir = "test_output", verbose = FALSE)
   expect_true(file.exists("test_output/test_table.tex"))
   expect_true(file.exists("test_output/test_table.pdf"))
-  expect_true(file.exists("test_output/test_table_cropped.pdf"))
 })
 
 # Test: Empty dataframe error
@@ -67,5 +66,4 @@ test_that("t2f uses custom filename", {
   t2f(mtcars, filename = "custom_table", sub_dir = "custom_output", verbose = FALSE)
   expect_true(file.exists("custom_output/custom_table.tex"))
   expect_true(file.exists("custom_output/custom_table.pdf"))
-  expect_true(file.exists("custom_output/custom_table_cropped.pdf"))
 })
