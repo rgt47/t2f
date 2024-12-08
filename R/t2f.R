@@ -20,7 +20,7 @@ t2f <- function(df, filename = NULL,
                 sub_dir = "output",
                 scolor = "blue!10", verbose = FALSE) {
         # Validate input dataframe
-    filename <- deparse(substitute(df))
+        if (is.null(filename)) filename <-  deparse(substitute(df))
         if (!is.data.frame(df)) stop("`df` must be a dataframe.")
         if (nrow(df) == 0) stop("`df` must not be empty.")
 
@@ -125,6 +125,11 @@ compile_latex <- function(tex_file, sub_dir) {
 #' @param output_pdf Path to the output cropped PDF file.
 crop_pdf <- function(input_pdf, output_pdf) {
         system(glue::glue("pdfcrop -margins 10 {shQuote(input_pdf)} {shQuote(output_pdf)}"))
+        # since pdfcrop creates a new file, we need to rename it to the original
+        # file name. We can do this by issuing a system command to rename the
+        # file.
+        # issue a system command to rename the cropped file as the original file
+        system(glue::glue("mv {shQuote(output_pdf)} {shQuote(input_pdf)}"))
 }
 
 #' Log messages if verbose is TRUE

@@ -6,7 +6,7 @@
 \usage{
 t2f(
   df,
-  filename = "table",
+  filename = NULL,
   sub_dir = "output",
   scolor = "blue!10",
   verbose = FALSE
