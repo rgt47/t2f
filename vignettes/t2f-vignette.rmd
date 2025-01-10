@@ -1,0 +1,163 @@
+---
+title: "t2f: Convert Dataframes to LaTeX Tables with Ease"
+author: "Ronald G. Thomas"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+    highlight: default
+vignette: >
+  %\VignetteIndexEntry{t2f Package Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7, 
+  fig.height = 5
+)
+library(t2f)
+```
+
+# Overview
+
+The `t2f` package provides a simple and powerful way to convert R dataframes into professionally formatted LaTeX tables and generate cropped PDF outputs.
+
+## Installation
+
+You can install the package using:
+
+```{r installation, eval=FALSE}
+# Install dependencies first
+install.packages(c("kableExtra", "glue"))
+
+# Install from GitHub (once published)
+# devtools::install_github("your-username/t2f")
+```
+
+## Basic Usage
+
+The primary function of the package is `t2f()`, which takes a dataframe and converts it to a LaTeX table with optional styling.
+
+### Simple Example with mtcars Dataset
+
+```{r mtcars-example}
+# Use the built-in mtcars dataset
+t2f(mtcars, 
+    filename = "motor_trend_cars", 
+    sub_dir = "tables", 
+    scolor = "blue!10", 
+    verbose = TRUE)
+```
+
+This code will:
+- Convert the `mtcars` dataframe to a LaTeX table
+- Create a "tables" subdirectory
+- Generate a PDF with blue-tinted alternating row colors
+- Print progress messages
+
+## Function Parameters
+
+The `t2f()` function offers several parameters:
+
+- `df`: The dataframe you want to convert (required)
+- `filename`: Base name for output files (optional, defaults to dataframe name)
+- `sub_dir`: Subdirectory for output files (default: "output")
+- `scolor`: LaTeX color for row shading (default: "blue!10")
+- `verbose`: Print progress messages (default: FALSE)
+
+## Advanced Examples
+
+### Academic Performance Dataset
+
+```{r academic-data-example}
+# Create an academic performance dataset
+academic_data <- data.frame(
+  Student = c("Alice", "Bob", "Charlie"),
+  Math = c(95, 88, 92),
+  Science = c(90, 85, 93),
+  English = c(88, 92, 86)
+)
+
+# Convert to LaTeX table with green row shading
+t2f(academic_data, 
+    filename = "student_scores", 
+    scolor = "green!10")
+```
+
+### Financial Performance Data
+
+```{r financial-data-example}
+# Create a hypothetical financial performance dataset
+financial_data <- data.frame(
+  Quarter = c("Q1 2023", "Q2 2023", "Q3 2023"),
+  Revenue = c(1000000, 1250000, 1500000),
+  Expenses = c(800000, 900000, 1000000),
+  Profit = c(200000, 350000, 500000)
+)
+
+# Convert to LaTeX table with red row shading
+t2f(financial_data, 
+    filename = "quarterly_financials", 
+    scolor = "red!10", 
+    verbose = TRUE)
+```
+
+## Key Features
+
+### Column Name Sanitization
+
+The package automatically sanitizes column names to ensure compatibility with LaTeX and file systems:
+
+```{r sanitization-example}
+# Demonstrate column name sanitization
+tricky_names <- data.frame(
+  "Column 1!" = 1:3,
+  "Special@Column" = 4:6
+)
+
+# Automatically converts to valid column names
+t2f(tricky_names, filename = "sanitized_columns")
+```
+
+### Cell Content Sanitization
+
+Special LaTeX characters like #, %, &, $, are automatically escaped to prevent compilation errors.
+
+## Troubleshooting
+
+### Prerequisites
+
+Ensure the following are installed:
+- R
+- `kableExtra` package
+- `pdflatex`
+- `pdfcrop`
+
+### Common Issues
+- Check system-wide LaTeX installation
+- Verify write permissions in output directory
+- Confirm all required LaTeX packages are available
+
+## Conclusion
+
+The `t2f` package simplifies converting R dataframes to professional LaTeX tables, providing:
+- Automatic sanitization
+- Customizable styling
+- Easy PDF generation
+
+## Package Information
+
+- **Version**: 0.1.0
+- **Author**: Ronald G. Thomas
+- **Dependencies**: kableExtra, glue
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

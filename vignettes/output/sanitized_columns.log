@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.23)  6 DEC 2024 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.23)  8 DEC 2024 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**table.tex
-(./table.tex
+**sanitized_columns.tex
+(./sanitized_columns.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -79,8 +79,8 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count267
 \l__pdf_internal_box=\box53
 )
-No file table.aux.
-\openout1 = `table.aux'.
+No file sanitized_columns.aux.
+\openout1 = `sanitized_columns.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -114,29 +114,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 10.
-
-Overfull \hbox (81.4757pt too wide) in paragraph at lines 10--54
- [][] 
- []
-
-[1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./ta
-ble.aux)
+[1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./sa
+nitized_columns.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1614 strings out of 474116
- 25030 string characters out of 5743682
- 1974187 words of memory out of 5000000
- 24024 multiletter control sequences out of 15000+600000
+ 1615 strings out of 474116
+ 25156 string characters out of 5743682
+ 1927187 words of memory out of 5000000
+ 24025 multiletter control sequences out of 15000+600000
  558377 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,9n,70p,355b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 52i,10n,70p,163b,248s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on table.pdf (1 page, 37925 bytes).
+Output written on sanitized_columns.pdf (1 page, 23110 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream
